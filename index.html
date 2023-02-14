@@ -8,6 +8,7 @@
         <div>
             <label for="catYears">Your cat's age:</label>
             <select name="catYears" id="catYears" onchange="setCatYears()"">
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -47,6 +48,8 @@
             </select>
             <p>years</p>
             <script>
+                var catYears = 0;
+
                 function setCatYears(){
                 catYears = document.getElementById('catYears').value;
                 }
@@ -55,6 +58,7 @@
         <div>
             <label for="catMonths"></label>
             <select name="catMonths" id="catMonths" onchange="setCatMonths()"">
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -69,13 +73,27 @@
             </select>
             <p>months</p>
             <script>
+                var catMonths = 0;
+
                 function setCatMonths(){
                 catMonths = document.getElementById('catMonths').value * 1/12;
                 }
             </script>
         </div>
         <div>
-            <button type="button">Calculate!</button>
+            <button type="button" onclick="convertCatToHuman()">Calculate!</button>
+            <script>
+                function convertCatToHuman() {
+                    catAge = parseInt(catYears) + parseFloat(catMonths);
+
+                    if (catAge < 6) {
+                    humanAge = parseFloat((catAge * 19 / 3) + 1);
+                    } else {
+                    humanAge = parseFloat((catAge - 6) * 4 + 40);
+                    };
+                    alert(humanAge);
+                }
+            </script>
         </div>
     </body>
 </html>
