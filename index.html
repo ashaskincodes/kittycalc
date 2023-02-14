@@ -2,27 +2,34 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <h1>KittyCalc</h1>
-        <div>
-            <label for="catYears">Your cat's age:</label>
-            <select id="catYears" onchange="setCatYears()">
-            </select>
-            <p>years</p>
-            <script src="scripts/catYears.js"></script>
-        </div>
-        <div>
-            <label for="catMonths"></label>
-            <select id="catMonths" onchange="setCatMonths()">
-            </select>
-            <p>months</p>
-            <script src="scripts/catMonths.js"></script>
-        </div>
-        <div id="calculate">
-            <button type="button" onclick="convertCatToHuman(), confirmResults()">Calculate!</button>
-            <script src="scripts/convertCatToHuman.js"></script>
-            <script src="scripts/displayResults.js"></script>
+        <div id="form">
+            <div>
+                <p class="formtext">Your cat's age</p>
+            </div>
+            <div class="section">
+                <select id="catYears" onchange="setCatYears()">
+                </select>
+                <p class="formtext">years</p>
+                <script src="scripts/catYears.js"></script>
+            </div>
+            <div class="section">
+                <label for="catMonths"></label>
+                <select id="catMonths" onchange="setCatMonths()">
+                </select>
+                <p class="formtext">months</p>
+                <script src="scripts/catMonths.js"></script>
+            </div>
+            <div id="calculate">
+                <button type="button" onclick="convertCatToHuman(), confirmResults()">Calculate!</button>
+                <script src="scripts/convertCatToHuman.js"></script>
+                <script src="scripts/displayResults.js"></script>
+            </div>
         </div>
         <script src="scripts/dropdowns.js"></script>
     </body>

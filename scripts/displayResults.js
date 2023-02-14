@@ -3,7 +3,7 @@ function displayResults() {
     newDiv.setAttribute('id','answer');
     const newContent = document.createTextNode(`Your cat is ${Math.round(humanAge)} in human years!`);
     newDiv.appendChild(newContent);
-    const currentDiv = document.getElementById("calculate");
+    const currentDiv = document.getElementById("form");
     document.body.insertBefore(newDiv, currentDiv.nextSibling);
 }
 

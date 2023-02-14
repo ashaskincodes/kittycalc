@@ -1,3 +1,67 @@
+* {
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    background-color: #361134;
+}
+
+h1 {
+    text-align: center;
+    color: #DC758F;
+    font-size: 200px;
+    font-weight: 700;
+}
+
+.formtext {
+    color: #DC758F;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 50px;
+}
+
+select {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 80px;
+}
+
+#catYears, #catMonths {
+    margin: 20px;
+    width: 120px;
+    text-align: center;
+}
+
+select option{
+    text-align: center;
+    font-size: 50px;
+}
+
+button {
+    font-size: 80px;
+    background-color: #DC758F;
+    color: #361134;
+    border-radius: 5%;
+    margin-top: 40px;
+}
+
 #answer {
-    color: red;
+    margin-top: 100px;
+    text-align: center;
+    color: #DC758F;
+    font-size: 60px;
 }
