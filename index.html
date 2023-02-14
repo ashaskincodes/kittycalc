@@ -86,12 +86,14 @@
                 function convertCatToHuman() {
                     catAge = parseInt(catYears) + parseFloat(catMonths);
 
-                    if (catAge < 6) {
-                    humanAge = parseFloat((catAge * 19 / 3) + 1);
+                    if (catAge <= 1) {
+                        humanAge = 15 * catAge;
+                    } else if (catAge > 1 && catAge <= 2) {
+                        humanAge = (10 * (catAge / 2) + 15);
                     } else {
-                    humanAge = parseFloat((catAge - 6) * 4 + 40);
-                    };
-                    alert(humanAge);
+                        humanAge = 25 + ((catAge - 2) * 4);
+                    }
+                    alert(humanAge.toFixed(1));
                 }
             </script>
         </div>
