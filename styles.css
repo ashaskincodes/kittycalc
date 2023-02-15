@@ -132,8 +132,8 @@ button {
 
 #answer {
     margin: auto;
-    margin-top: 100px;
-    padding: 20px;
+    margin-top: 40px;
+    padding: 10px;
     text-align: center;
     width: 80%;
     background-color: #577590;
@@ -141,4 +141,55 @@ button {
     border-radius: 3%;
     color: white;
     font-size: 50px;
+}
+
+@media screen and (min-device-width: 600px) {
+    #logo {
+        position: absolute;
+        width: 40%;
+        right: 0;
+        top: 0;
+    }
+
+    #shape1, #shape2 {
+        display: none;
+    }
+
+    #catimg {
+        position: absolute;
+        transform: scaleX(-1);
+        width: 30%;
+        left: 0;
+        top: 0;
+    }
+
+    #form {
+        width: 40%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        margin: auto;
+        margin-top: 60px;
+    }
+
+    .formtext {
+        color: black;
+        font-size: 30px;
+        font-weight: 200;
+    }
+
+    #agetext {
+        font-size: 60px;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 100px;
+        margin-left: 250px;
+    }
+
+    #answer {
+        width: 10%;
+        border: 3px solid black;
+        font-size: 30px;
+    }
 }
