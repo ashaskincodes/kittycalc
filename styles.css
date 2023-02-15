@@ -1,7 +1,5 @@
 * {
-/*    font-family: 'Chewy', cursive; */
-/*    font-family: 'Love Ya Like A Sister', cursive; */
-    font-family: 'Chicle', cursive;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 body {
@@ -14,34 +12,64 @@ body {
 
 .formtext {
     color: black;
-    font-size: 50px;
-    font-weight: 400;
+    font-size: 80px;
+    font-weight: 200;
+}
+
+#agetext {
+    text-align: center;
+}
+
+#yearsmonths {
+    display: inline;
 }
 
 #form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
     align-items: center;
-    width: 80%;
-    margin: auto;
 }
 
-.section {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin: 50px;
+#section1 {
+    grid-row-start:    1;
+    grid-row-end:      2;
+    grid-column-start: 1;
+    grid-column-end:   2;
+}
+
+#years {
+    grid-row-start:    1;
+    grid-row-end:      2;
+    grid-column-start: 2;
+    grid-column-end:   3;
+}
+
+#section2 {
+    grid-row-start:    2;
+    grid-row-end:      3;
+    grid-column-start: 1;
+    grid-column-end:   2;
+}
+
+#months {
+    grid-row-start:    2;
+    grid-row-end:      3;
+    grid-column-start: 2;
+    grid-column-end:   3;
+}
+
+#calculate {
+    grid-row-start:    1;
+    grid-row-end:      3;
+    grid-column-start: 3;
+    grid-column-end:   4;
 }
 
 select {
     font-family: 'Work Sans', sans-serif;
     font-size: 80px;
-}
-
-#catYears, #catMonths {
-    margin: 20px;
-    width: 120px;
-    text-align: center;
 }
 
 select option{
@@ -50,10 +78,11 @@ select option{
 }
 
 button {
-    font-size: 80px;
+    font-size: 60px;
+    padding: 40px;
     background-color: white;
     color: black;
-    border-radius: 5%;
+    border-radius: 8%;
     margin-top: 40px;
 }
 
