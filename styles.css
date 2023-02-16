@@ -39,7 +39,7 @@ body {
     align-items: center;
 }
 
-#agetext {
+#agetextmobile {
     grid-column-start: 1;
     grid-column-end: 3;
     font-size: 32px;
@@ -47,8 +47,8 @@ body {
     text-align: right;
 }
 
-#catimg {
-    width: 90%;
+#catimgmobile {
+    width: 60%;
     align-self: center;
     justify-self: center;
 }
@@ -132,64 +132,213 @@ button {
 
 #answer {
     margin: auto;
-    margin-top: 40px;
     padding: 10px;
+    margin-top: 40px;
     text-align: center;
     width: 80%;
     background-color: #577590;
     border: 5px solid black;
     border-radius: 3%;
     color: white;
-    font-size: 50px;
+    font-size: 35px;
 }
 
-@media screen and (min-device-width: 600px) {
-    #logo {
-        position: absolute;
-        width: 40%;
-        right: 0;
-        top: 0;
+#catimgdesktop, #agetextdesktop {
+    display: none;
+}
+
+#decleft, #decright {
+    display: none;
+}
+
+#kibblelink {
+    display: none;
+}
+
+#kibblelinkmobile {
+    font-size: 30px;
+    text-align: center;
+    opacity: 0%;
+    position: absolute;
+    bottom: 0;
+}
+
+.kibbleappearmobile {
+    animation: kibble 5s forwards;
+}
+
+@keyframes kibble {
+    from {
+        opacity : 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@media screen and (min-device-width: 1024px) {
+    body {
+        overflow: hidden;
+    }
+
+    #catimgmobile, #agetextmobile {
+        display: none;
     }
 
     #shape1, #shape2 {
         display: none;
     }
 
-    #catimg {
-        position: absolute;
-        transform: scaleX(-1);
-        width: 30%;
-        left: 0;
-        top: 0;
+    #desktopgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+    }
+
+    #logo {
+        grid-row-start:    1;
+        grid-row-end:      3;
+        grid-column-start: 1;
+        grid-column-end:   2;
+        width: 100%;
+    }
+
+    #ageandimg {
+        display: initial;
+    }
+
+    #catimgdesktop {
+        display: initial;
+        grid-row-start:    1;
+        grid-row-end:      6;
+        grid-column-start: 3;
+        grid-column-end:   4;
+        width: 100%;
+        animation: cat 3s forwards;
+    }
+
+    @keyframes cat {
+        from {
+            transform: translateX(500px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    #agetextdesktop {
+        display: initial;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        font-size: 32px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    #agetextdesktop, #form {
+        opacity: 0%;
+        animation: appear 5s forwards;
+        animation-delay: 2s;
     }
 
     #form {
-        width: 40%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        align-items: center;
-        margin: auto;
-        margin-top: 60px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
     }
 
-    .formtext {
-        color: black;
+    #decleft {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        justify-self: end;
+        height: 40%;
+        opacity: 0%;
+    }
+
+    #decright {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        justify-self: start;
+        height: 40%;
+        opacity: 0%;
+    }
+
+    #decleft, #decright {
+        display: initial;
+    }
+
+    .decappear {
+        animation: appear 5s forwards;
+    }
+
+    #kibblelink {
+        display: initial;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 7;
         font-size: 30px;
-        font-weight: 200;
+        text-align: center;
+        opacity: 0%;
     }
 
-    #agetext {
-        font-size: 60px;
-        font-weight: 400;
-        text-align: center;
-        margin-top: 100px;
-        margin-left: 250px;
+    .kibbleappear {
+        animation: kibble 5s forwards;
+        animation-delay: 1.5s;
     }
 
     #answer {
-        width: 10%;
-        border: 3px solid black;
-        font-size: 30px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        margin: auto;
+        margin-top: initial;
+        text-align: center;
+        padding: 20px;
+        background-color: #577590;
+        border: 2px solid black;
+        border-radius: 3%;
+        color: white;
+        font-size: 35px;
+        width: 90%;
+        animation : pulse 1s;
+    }
+
+    @keyframes pulse {
+        from {
+            transform : scale(0.1   );
+        }
+        to {
+            transform : scale(1);
+        }
+    }
+
+    @keyframes appear {
+        from {
+            opacity : 0%;
+        }
+        to {
+            opacity: 100%;
+        }
+    }
+
+    @keyframes kibble {
+        from {
+            opacity : 0%;
+        }
+        to {
+            opacity: 100%;
+        }
     }
 }

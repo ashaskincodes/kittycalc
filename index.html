@@ -8,33 +8,43 @@
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <img src="images/kittycalclogo.png" id="logo" alt="The kitty calc logo. The small i has a pawprint in place of the dot, and the y has a cat's tail">
-        <div id="shape1"></div>
-        <div id="ageandimg">
-        <p class="formtext" id="agetext">Enter your cat's age</p>
-        <img src="images/cat2.png" id="catimg" alt="a drawing of a cheeky looking cat">
+        <div id="desktopgrid">
+            <img src="images/kittycalclogo.png" id="logo" alt="The kitty calc logo. The small i has a pawprint in place of the dot, and the y has a cat's tail">
+            <div id="shape1"></div>
+            <div id="ageandimg">
+                <p class="formtext" id="agetextmobile">Enter your kitty's age</p>
+                <img src="images/cat2.png" id="catimgmobile" alt="a drawing of a cheeky looking cat">
+            </div>
+            <p class="formtext" id="agetextdesktop">Enter your kitty's age</p>
+            <img src="images/cat2.png" id="catimgdesktop" alt="a drawing of a cheeky looking cat">
+            <div id="shape2"></div>
+            <div id="form">
+                <div class="section" id="section1">
+                    <select id="catYears" onchange="setCatYears()">
+                    </select>
+                    <script src="scripts/catYears.js"></script>
+                </div>
+                <p class="formtext" id="years">years</p>
+                <div class="section" id="section2">
+                    <label for="catMonths"></label>
+                    <select id="catMonths" onchange="setCatMonths()">
+                    </select>
+                    <script src="scripts/catMonths.js"></script>
+                </div>
+                <p class="formtext" id="months">months</p>
+                <div id="calculate">
+                    <button type="button" onclick="convertCatToHuman(), confirmResults(), decAppear(), kibbleLink()">Calculate</button>
+                    <script src="scripts/convertCatToHuman.js"></script>
+                    <script src="scripts/displayResults.js"></script>
+                    <script src="scripts/decAppear.js"></script>
+                    <script src="scripts/kibbleLink.js"></script>
+                </div>
+            </div>
+            <img src="images/decleft.png" id="decleft">
+            <img src="images/decright.png" id="decright">
+            <p id="kibblelink">Want to know how much your kitty should be eating? Find out at KittyKibbleCalc</p>
         </div>
-        <div id="shape2"></div>
-        <div id="form">
-            <div class="section" id="section1">
-                <select id="catYears" onchange="setCatYears()">
-                </select>
-                <script src="scripts/catYears.js"></script>
-            </div>
-            <p class="formtext" id="years">years</p>
-            <div class="section" id="section2">
-                <label for="catMonths"></label>
-                <select id="catMonths" onchange="setCatMonths()">
-                </select>
-                <script src="scripts/catMonths.js"></script>
-            </div>
-            <p class="formtext" id="months">months</p>
-            <div id="calculate">
-                <button type="button" onclick="convertCatToHuman(), confirmResults()">Calculate</button>
-                <script src="scripts/convertCatToHuman.js"></script>
-                <script src="scripts/displayResults.js"></script>
-            </div>
-        </div>
+        <p id="kibblelinkmobile">Want to know how much your kitty should be eating? Find out at KittyKibbleCalc</p>
         <script src="scripts/dropdowns.js"></script>
     </body>
 </html>
