@@ -13,14 +13,14 @@ body {
 }
 
 #shape1 {
-    background-color: #577590;
+    background-color: #3C7A89;
     width: 75%;
     height: 4px;
     margin: auto;
 }
 
 #shape2 {
-    background-color: #577590;
+    background-color: #3C7A89;
     width: 65%;
     height: 4px;
     margin: auto;
@@ -120,7 +120,7 @@ select option{
 button {
     font-size: 25px;
     font-weight: 600;
-    background-color: #D17B0F;
+    background-color: #D5A021;
     color: white;
     border-radius: 5%;
     margin-top: 40px;
@@ -136,7 +136,7 @@ button {
     margin-top: 40px;
     text-align: center;
     width: 80%;
-    background-color: #577590;
+    background-color: #3C7A89;
     border: 5px solid black;
     border-radius: 3%;
     color: white;
@@ -159,8 +159,6 @@ button {
     font-size: 20px;
     text-align: center;
     opacity: 0%;
-    position: absolute;
-    bottom: 0;
 }
 
 .kibbleappearmobile {
@@ -196,9 +194,9 @@ and (max-device-width: 1023px) {
         display: grid;
         grid-template-columns: auto;
         grid-auto-rows: 1fr;
-        width: 100vw;
-        height: 100vh;
+        height: 100%;
         justify-items: center;
+        overflow-x: hidden;
     }
 
     #logo {
@@ -314,7 +312,7 @@ and (max-device-width: 1023px) {
     button {
         font-size: 25px;
         font-weight: 400;
-        background-color: #D17B0F;
+        background-color: #D5A021;
         color: white;
         margin-top: initial;
         padding: initial;
@@ -353,7 +351,7 @@ and (max-device-width: 1023px) {
         grid-column-end: 3;
         grid-row-start: 5;
         grid-row-end: 6;
-        background-color: #577590;
+        background-color: #3C7A89;
         border: 1px solid black;
         border-radius: 3%;
         color: white;
@@ -524,7 +522,7 @@ and (max-device-width: 1023px) {
         margin-top: initial;
         text-align: center;
         padding: 20px;
-        background-color: #577590;
+        background-color: #3C7A89;
         border: 2px solid black;
         border-radius: 3%;
         color: white;
