@@ -388,6 +388,10 @@ and (max-device-width: 1023px) {
     }
 }
 
+a:visited, a:link {
+    color: #3C7A89;
+}
+
 @media screen and (min-device-width: 1024px) {
     body {
         overflow: hidden;
